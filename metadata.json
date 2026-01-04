@@ -1,0 +1,6 @@
+{
+    "uuid": "test@burito",
+    "name": "Hello, world! desklet",
+    "description": "Testing",
+    "prevent-decorations": false
+}
