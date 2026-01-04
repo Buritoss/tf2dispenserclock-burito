@@ -6,10 +6,7 @@ const Cogl = imports.gi.Cogl;
 const GLib = imports.gi.GLib;
 
 
-//const UUID = "test@burito";
-//const DESKLET_ROOT = imports.ui.deskletManager.deskletMeta[UUID].path;
-
-function HelloDesklet(metadata, desklet_id) {
+function Tf2DispenserClockDesklet(metadata, desklet_id) {
     this._init(metadata, desklet_id);
 }
 
@@ -30,7 +27,7 @@ function getImageAtScale(imageFileName, width, height) {
 }
 
 
-HelloDesklet.prototype = {
+Tf2DispenserClockDesklet.prototype = {
     __proto__: Desklet.Desklet.prototype,
 
     _init: function(metadata, desklet_id) {
@@ -40,20 +37,20 @@ HelloDesklet.prototype = {
     },
 
     setupUI: function() {
-       this.refreshSize(); 
+       this.setupImageAndTimer(); 
        this.updateTime();
     },
 
-    refreshSize:function()
+    setupImageAndTimer:function()
     {
-        this.clock = new St.Bin({style_class: 'clock'});
+        this.clock = new St.Bin();
 		this.image_container = new St.Group({style_class: 'image_container'});
 
         this.timeContainer =  new St.BoxLayout({vertical:false, style_class: 'time_container'});
-        this.timeLabel = new St.Label({style_class: "time_label"});
+        this.timeLabel = new St.Label();
         this.timeContainer.add_actor(this.timeLabel);
 
-        let dispenserImagePath ="/home/burito/.local/share/cinnamon/desklets/test@burito/img/dispenser.png";
+        let dispenserImagePath ="/home/burito/.local/share/cinnamon/desklets/t2fdispenserclock@burito/img/dispenser.png";
         
         let scale = global.ui_scale;
         this.height = 432;
@@ -93,5 +90,5 @@ HelloDesklet.prototype = {
 }
 
 function main(metadata, desklet_id) {
-    return new HelloDesklet(metadata, desklet_id);
+    return new Tf2DispenserClockDesklet(metadata, desklet_id);
 }

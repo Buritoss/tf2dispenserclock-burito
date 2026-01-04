@@ -1,6 +1,6 @@
 {
-    "uuid": "test@burito",
-    "name": "Hello, world! desklet",
-    "description": "Testing",
+    "uuid": "tf2dispenserclock@burito",
+    "name": "Tf2 dispenser clock",
+    "description": "Clock in the image of tf2 dispenser.",
     "prevent-decorations": false
 }
