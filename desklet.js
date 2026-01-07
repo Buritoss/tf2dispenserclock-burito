@@ -50,7 +50,7 @@ Tf2DispenserClockDesklet.prototype = {
         this.timeLabel = new St.Label();
         this.timeContainer.add_actor(this.timeLabel);
 
-        let dispenserImagePath ="/home/burito/.local/share/cinnamon/desklets/t2fdispenserclock@burito/img/dispenser.png";
+        let dispenserImagePath ="/home/burito/.local/share/cinnamon/desklets/tf2dispenserclock@burito/img/dispenser.png";
         
         let scale = global.ui_scale;
         this.height = 432;
